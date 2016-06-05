@@ -5,6 +5,7 @@ import scala.util.Success
 import scala.util.Failure
 import scala.Array.canBuildFrom
 
+@SerialVersionUID(1L)
 class Student(school: String,
   sex: String,
   age: Int,
@@ -37,7 +38,7 @@ class Student(school: String,
   absences: Int,
   g1: Int,
   g2: Int,
-  g3: Int) extends Product {
+  g3: Int) extends Product with Serializable {
 
   @throws(classOf[IndexOutOfBoundsException])
   override def productElement(n: Int): Any = n match {
