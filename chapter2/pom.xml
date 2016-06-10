@@ -14,7 +14,7 @@
 
     <groupId>alp.scala.dataanalysis</groupId>
     <artifactId>chapter2</artifactId>
-    <version>${chapter1.scala.dataanalysis.version}</version>
+    <version>${chapter2.scala.dataanalysis.version}</version>
 
     <dependencies>
         <!-- Support to read csv files in spark -->
