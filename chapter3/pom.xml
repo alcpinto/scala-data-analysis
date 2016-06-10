@@ -9,7 +9,82 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>alp.scala.dataanalysis</groupId>
     <artifactId>chapter3</artifactId>
+    <version>${chapter3.scala.dataanalysis.version}</version>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_${scala.binary.version}</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.esotericsoftware.kryo</groupId>
+            <artifactId>kryo</artifactId>
+            <version>2.24.0</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/com.twitter/chill-avro_2.11 -->
+        <dependency>
+            <groupId>com.twitter</groupId>
+            <artifactId>chill-avro_2.11</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/org.apache.parquet/parquet-avro -->
+        <dependency>
+            <groupId>org.apache.parquet</groupId>
+            <artifactId>parquet-avro</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/com.sksamuel.scalax/scalax_2.11 -->
+        <!-- Core -->
+        <dependency>
+            <groupId>com.github.scala-incubator.io</groupId>
+            <artifactId>scala-io-core_2.11</artifactId>
+            <version>0.4.3</version>
+        </dependency>
+
+        <!-- File -->
+        <dependency>
+            <groupId>com.github.scala-incubator.io</groupId>
+            <artifactId>scala-io-file_2.11</artifactId>
+            <version>0.4.3</version>
+        </dependency>
+
+        <!-- http://mvnrepository.com/artifact/org.hsqldb/hsqldb -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.4</version>
+        </dependency>
+
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>1.7.6</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
