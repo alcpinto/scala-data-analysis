@@ -61,7 +61,30 @@
             <version>2.3.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.databricks</groupId>
+            <artifactId>spark-csv_${scala.binary.version}</artifactId>
+            <version>1.4.0</version>
+        </dependency>
 
+        <!-- http://mvnrepository.com/artifact/org.json4s/json4s-jackson_2.11 -->
+        <dependency>
+            <groupId>org.json4s</groupId>
+            <artifactId>json4s-jackson_2.11</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <!-- http://mvnrepository.com/artifact/org.json4s/json4s-core_2.11 -->
+        <dependency>
+            <groupId>org.json4s</groupId>
+            <artifactId>json4s-core_2.11</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.5.5</version>
+        </dependency>
 
     </dependencies>
 
