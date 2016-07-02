@@ -19,7 +19,8 @@ object DataFrameFromJSON extends App {
 
 
   // Create DataFrame from JSON
-  val jsonLocation = getClass.getResource("/profiles.json").getPath
+//  val jsonLocation = getClass.getResource("/profiles.json").getPath
+  val jsonLocation = "hdfs://localhost/data/scalada/profiles.json"
   val dFrame = sqlContext.read.json(jsonLocation)
 
   dFrame.printSchema()

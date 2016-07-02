@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>alp.scala</groupId>
+        <artifactId>scala-spark</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <groupId>alp.scala.dataanalysis</groupId>
+    <artifactId>chapter5</artifactId>
+    <version>chapter5.scala.dataanalysis.version</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.scalanlp/epic_2.11 -->
+        <dependency>
+            <groupId>org.scalanlp</groupId>
+            <artifactId>epic_2.11</artifactId>
+            <version>0.3.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.scalanlp/epic-parser-en-span_2.11 -->
+        <dependency>
+            <groupId>org.scalanlp</groupId>
+            <artifactId>epic-parser-en-span_2.11</artifactId>
+            <version>2015.2.19</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/edu.stanford.nlp/stanford-corenlp -->
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>3.6.0</version>
+            <classifier>models</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

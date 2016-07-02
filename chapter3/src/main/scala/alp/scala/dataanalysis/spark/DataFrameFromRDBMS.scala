@@ -18,7 +18,7 @@ object DataFrameFromRDBMS extends App {
   val options = Map(
     "driver" -> config.getString("hsqldb.driver"),
     "url" -> config.getString("hsqldb.connection.url"),
-    "dbtable" -> "(select * from PUBLIC.student) student",
+    "dbtable" -> "(select * from PUBLIC.STUDENT) as students",
     "partitionColumn" -> "id",
     "lowerBound" -> "1",
     "upperBound" -> "100",
