@@ -15,6 +15,7 @@
     <version>chapter5.scala.dataanalysis.version</version>
 
     <dependencies>
+
         <!-- https://mvnrepository.com/artifact/org.scalanlp/epic_2.11 -->
         <dependency>
             <groupId>org.scalanlp</groupId>
