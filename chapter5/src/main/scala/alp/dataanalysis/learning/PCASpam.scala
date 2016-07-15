@@ -167,7 +167,7 @@ object PCASpam extends App {
     val predicted = model.predict(testData.map(point => point.features))
     val actuals = testData.map(point => point.label)
     val predictsAndActuals: RDD[(Double, Double)] = predicted.zip(actuals)
-    info (predictsAndActuals.collect.toString)
+    predictsAndActuals.collect.foreach(p => info(p.toString))
     predictsAndActuals
   }
 
